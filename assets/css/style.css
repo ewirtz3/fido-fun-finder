@@ -1,1 +1,21 @@
 
+img {
+    height: 150px;
+    width: 150px;
+}
+
+#sunshine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.weatherCard{
+    text-align: center;
+    background: skyblue;
+    border-radius: 10px;
+    box-shadow: 5px, 5px, 15px, 1px grey;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+}
