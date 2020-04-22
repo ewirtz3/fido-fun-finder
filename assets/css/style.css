@@ -19,3 +19,21 @@ img {
     font-size: large;
     font-weight: 500;
 }
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    border-radius: 10px;
+}
+
+h5 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}

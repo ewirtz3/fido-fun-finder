@@ -1,14 +1,11 @@
 
-
+//--------------------------------Click function that pulls weather info--------------------------------------------------------------
 
 $("#sunshineBtn").on("click", function (event) {
     event.preventDefault();
-
-    //var date = $(".dayOfWeek").text(moment().format("dddd"));
-
-    var input = "Chicago";
+    
+    var input = $(".input").val();
     var APIKey = "0246ddd8e1c43f29cf72682d14088ce6";
-
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + input + "&appid=" + APIKey + "&units=imperial";
 
     $.ajax({
@@ -22,8 +19,6 @@ $("#sunshineBtn").on("click", function (event) {
 
         for (i = 7; i < response.list.length; i += 8) {
 
-           
-
             var newDiv = $("<div>").addClass("weatherCard");
             var weather = newDiv.appendTo("#sunshine");
 
@@ -36,13 +31,11 @@ $("#sunshineBtn").on("click", function (event) {
             var iconCode = response.list[i].weather[0].icon;
             var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
             var iconDiv = $("<img>").attr('src', iconUrl).appendTo(newDiv);
-
-
-            
         }
     })
 
     $("#frontPage").removeClass("is-active");
+    $("#nature").removeClass("is-hidden");
 })
 
 
@@ -51,9 +44,9 @@ $("#sunshineBtn").on("click", function (event) {
 
 
 
+//-----------------------------------Click function that creates cocktail info-----------------------------------------------------------------
 
-
-$(".is-primary").on("click", function (event) {
+$("#spiritsBtn").on("click", function (event) {
 
     event.preventDefault();
     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -67,8 +60,8 @@ $(".is-primary").on("click", function (event) {
             var newDrink = $("<div>").addClass("newDrinkInfo").appendTo("#spirits");
             var drinkName = $("<h3>").text(response.drinks[0].strDrink).appendTo(newDrink);
             var drinkImage = $("<img>").attr("src", response.drinks[0].strDrinkThumb).appendTo(newDrink);
+            var ingSection = $("<h5>").text("Ingredients: ").appendTo(newDrink);
             
-        
             var ingredients = [
                             response.drinks[0].strIngredient1, 
                             response.drinks[0].strIngredient2, 
@@ -86,14 +79,9 @@ $(".is-primary").on("click", function (event) {
                             response.drinks[0].strIngredient14, 
                             response.drinks[0].strIngredient15
                         ];
-                        
-                        console.log(ingredients);
-                        console.log(ingredients.length);
             
             var newArray = ingredients.filter(function (noNull) {
-              
                 return noNull != null;
-
             });
 
             var measurements = [
@@ -112,28 +100,24 @@ $(".is-primary").on("click", function (event) {
                             response.drinks[0].strMeasure13,
                             response.drinks[0].strMeasure14,
                             response.drinks[0].strMeasure15,
-            ];
+                        ];
 
             var measureArray = measurements.filter(function (noNull) {
-
                 return noNull != null;
+            });
 
-            })
+            console.log(measureArray);
 
             for (i = 0; i < newArray.length; i++) {
-            
-                console.log(newArray);
-                ingredientList = $("<ul>").addClass("drinkList").appendTo(newDrink)
-                var newIngredients = $("<li>").text(measureArray[i] + ": " + newArray[i]).appendTo(".drinkList");
-
+                var ingredientList = $("<ul>").appendTo(newDrink);
+                var newIngredients = $("<li>").text(measureArray[i] + ": " + newArray[i]).appendTo("ul");
             }
-
-            var mix = $("<p>").text(response.drinks[0].strInstructions).appendTo(newDrink);
             
-        
+            var insrSection = $("<h5>").text("Instructions").appendTo(newDrink);
+            var mix = $("<p>").text(response.drinks[0].strInstructions).appendTo(newDrink);
     })
-
-    $("#frontPage").removeClass("is-active");
+        $("#frontPage").removeClass("is-active");
+        $("#drinks").removeClass("is-hidden");
 })
 
 
