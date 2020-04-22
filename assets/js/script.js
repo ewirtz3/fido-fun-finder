@@ -2,6 +2,7 @@
 //--------------------------------Click function that pulls weather info--------------------------------------------------------------
 
 $("#sunshineBtn").on("click", function (event) {
+
     event.preventDefault();
     
     var input = $(".input").val();
@@ -26,8 +27,7 @@ $("#sunshineBtn").on("click", function (event) {
 
             var temp = response.list[i].main.temp;
             var tempDiv = $("<p>").text(temp).appendTo(newDiv);
-
-
+            
             var iconCode = response.list[i].weather[0].icon;
             var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
             var iconDiv = $("<img>").attr('src', iconUrl).appendTo(newDiv);
