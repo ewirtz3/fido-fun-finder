@@ -9,16 +9,90 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-    <title>Fido Fun Finder</title>
+    <script
+      src="https://kit.fontawesome.com/de03f8749b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@800&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Inside or Outside?</title>
   </head>
   <body>
     <header class="hero has-background-link">
-      <div class="hero-body has-text-centered">
-        <h3 class="has-text-primary has-text-weight-bold">FIDO FINDER</h3>
-        <h6 class="has-text-grey-darker">
-          Find a park for a date with your doggo
-        </h6>
+      <div class="hero-body">
+        <div class="container">
+          <p class="has-text-primary title">Inside or Outside?</p>
+          <p class="has-text-grey-darker subtitle which">
+            Sunshine or spirits?
+          </p>
+        </div>
       </div>
     </header>
+    
+    <section class="modal is-active" id = "frontPage"><!--remove is-activeclass-->
+        
+        <div class="modal-background">
+        </div>
+        
+        <div class="modal-card">
+            <header class="modal-card-head has-background-primary">
+                <p class="modal-card-title question">What kind of trouble should we get into today?</p>
+            </header>
+            <section class="modal-card-body">
+                <p class="subtitle">If you need to get outside, enter your city and click the button below:</p>
+                <div class="field">
+                  <div class="control">
+                    <input type="text" class="input is-primary" placeholder="Enter City">
+                  </div>
+                </div>
+                <button class="button is-warning" id="sunshineBtn">Gimme sunshine!</button>
+                <hr>
+                <p class="subtitle">If you need a drink, click the button below:</p>
+                <button class="button is-primary" id="spiritsBtn">Gimme spirits!</button>
+            </section>
+        </div>
+    
+    </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-one-half has-background-warning is-hidden" id="nature">
+                <p class="subtitle">
+                    You chose sunshine, here's your weather forecast:
+                </p>
+                <div class="box" id="sunshine">
+                    <!--Forecast Goes Here-->
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-half has-background-primary is-hidden" id="drinks">
+                <p class="subtitle">
+                    You chose spirits, here's your random cocktail:
+                </p>
+                
+                  <div class="box" id="spirits">
+                    <div class=  "columns" id = "drinkInfo">
+                      <div class = "column is-one-third" id = "nameAndPic">
+
+                      </div>
+
+                      <div class = "column is-one-third" id = "listOfIngredients">
+                        
+                      </div>
+
+                      <div class = "column is-one-third" id = "howTo">
+                        
+                      </div>
+                    </div>
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "./assets/js/script.js"></script>
   </body>
 </html>
