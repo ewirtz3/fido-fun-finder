@@ -29,7 +29,37 @@ img {
   font-family: "Oswald", sans-serif;
 }
 
+
 .question,
 .button {
   font-family: "Open Sans", sans-serif;
-}
+};
+
+.weatherCard{
+    text-align: center;
+    background: skyblue;
+    border-radius: 10px;
+    box-shadow: 5px, 5px, 15px, 1px grey;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+};
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    border-radius: 10px;
+};
+
+h5 {
+    font-weight: bold;
+    text-decoration: underline;
+};
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+};
+

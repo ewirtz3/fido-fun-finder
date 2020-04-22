@@ -1,3 +1,4 @@
+
 //onClick function for sunshine button, takes user city input to query the Open Weather API and create a 5-day forecast card deck for that city. Each day shows
 $("#sunshineBtn").on("click", function (event) {
   event.preventDefault();
@@ -114,3 +115,9 @@ $("#spiritsBtn").on("click", function (event) {
   $("#frontPage").removeClass("is-active");
   $("#drinks").removeClass("is-hidden");
 });
+
+
+
+
+
+
