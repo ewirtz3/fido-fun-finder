@@ -1,14 +1,39 @@
-
 img {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 }
 
-#sunshine{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#sunshine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+.weatherCard {
+  text-align: center;
+  background: skyblue;
+  border-radius: 10px;
+  box-shadow: 5px, 5px, 15px, 1px grey;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+}
+
+.title {
+  font-family: "Bangers", cursive;
+  font-size: 50px;
+}
+
+.subtitle,
+.which {
+  font-family: "Oswald", sans-serif;
+}
+
+
+.question,
+.button {
+  font-family: "Open Sans", sans-serif;
+};
 
 .weatherCard{
     text-align: center;
@@ -18,22 +43,23 @@ img {
     color: white;
     font-size: large;
     font-weight: 500;
-}
+};
 
 img {
     margin-top: 10px;
     margin-bottom: 10px;
     
     border-radius: 10px;
-}
+};
 
 h5 {
     font-weight: bold;
     text-decoration: underline;
-}
+};
 
 h3 {
     font-weight: bold;
     font-size: 30px;
     text-decoration: underline;
-}
+};
+
