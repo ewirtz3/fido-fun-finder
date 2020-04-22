@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/de03f8749b.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@800&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <title>Inside or Outside?</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
       <div class="hero-body">
         <div class="container">
           <p class="has-text-primary title">Inside or Outside?</p>
-          <p class="has-text-grey-darker subtitle">
+          <p class="has-text-grey-darker subtitle which">
             Sunshine or spirits?
           </p>
         </div>
@@ -31,7 +32,7 @@
         </div>
         <div class="modal-card">
             <header class="modal-card-head has-background-primary">
-                <p class="modal-card-title">What kind of trouble should we get into today?</p>
+                <p class="modal-card-title question">What kind of trouble should we get into today?</p>
             </header>
             <section class="modal-card-body">
                 <p class="subtitle">If you need to get outside, enter your city and click the button below:</p>
@@ -47,6 +48,24 @@
             </section>
         </div>
     </section>
+    <section class="modal" id = "ageCheck"><!--add is-active class on click of Gimme Spirits! button-->
+      <div class="modal-background">
+      </div>
+      <div class="modal-card">
+          <header class="modal-card-head has-background-primary">
+              <p class="modal-card-title question">Are you even old enough to drink?</p>
+          </header>
+          <section class="modal-card-body">
+              <p class="subtitle">Please enter your date of birth to confirm:</p>
+              <div class="field">
+                <div class="control">
+                  <input type="text" class="input is-primary" placeholder="Enter City">
+                </div>
+              </div>
+              <button class="button is-warning" id="submit">Submit</button>
+          </section>
+      </div>
+  </section>
     <main>
       <section class="section">
         <div class="container">
