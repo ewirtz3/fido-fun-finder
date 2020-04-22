@@ -16,7 +16,6 @@ $("#sunshineBtn").on("click", function (event) {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
     for (i = 7; i < response.list.length; i += 8) {
       var newDiv = $("<div>").addClass("weatherCard").appendTo("#sunshine");
 
@@ -45,7 +44,6 @@ $("#spiritsBtn").on("click", function (event) {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response.drinks[0]);
     var newDrink = $("<div>").addClass("newDrinkInfo").appendTo("#spirits");
     var drinkName = $("<h3>")
       .text(response.drinks[0].strDrink)
@@ -72,8 +70,6 @@ $("#spiritsBtn").on("click", function (event) {
       response.drinks[0].strIngredient15,
     ];
 
-    console.log(ingredients);
-    console.log(ingredients.length);
     var newArray = ingredients.filter(function (noNull) {
       return noNull != null;
     });
@@ -101,8 +97,6 @@ $("#spiritsBtn").on("click", function (event) {
     });
 
     for (i = 0; i < newArray.length; i++) {
-      console.log(newArray.length);
-      console.log(newArray);
       ingredientList = $("<ul>").appendTo(newDrink);
       var newIngredients = $("<li>")
         .text(measureArray[i] + ": " + newArray[i])
