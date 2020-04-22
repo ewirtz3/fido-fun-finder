@@ -16,17 +16,16 @@ $("#sunshineBtn").on("click", function (event) {
 
     }).then(function (response) {
 
-        console.log(response)
-
+        
         for (i = 7; i < response.list.length; i += 8) {
 
-            var newDiv = $("<div>").addClass("weatherCard");
-            var weather = newDiv.appendTo("#sunshine");
+            var newDiv = $("<div>").addClass("weatherCard").appendTo("#sunshine");
+            
 
-            var futureDate = $("<h5>" + moment.unix(response.list[i].dt).format("M/D/YYYY") + "</h5>").appendTo(newDiv);
+            var futureDate = $("<h5>").text(moment.unix(response.list[i].dt).format("M/D/YYYY")).appendTo(newDiv);
 
-            var temp = response.list[i].main.temp;
-            var tempDiv = $("<p>").text(temp).appendTo(newDiv);
+            
+            var tempDiv = $("<p>").html("<span>" + response.list[i].main.temp + " &deg;F" + "</span>").appendTo(newDiv);
             
             var iconCode = response.list[i].weather[0].icon;
             var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
@@ -57,9 +56,7 @@ $("#spiritsBtn").on("click", function (event) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-            console.log(response.drinks[0]);
-
-            // var newDrink = $("#drinkInfo");
+            
             var drinkName = $("<h3>").text(response.drinks[0].strDrink).appendTo("#nameAndPic");
             var drinkImage = $("<img>").attr("src", response.drinks[0].strDrinkThumb).appendTo("#nameAndPic");
             var ingSection = $("<h5>").text("Ingredients: ").appendTo("#listOfIngredients");
