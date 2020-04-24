@@ -3,10 +3,23 @@ img {
   width: 150px;
 }
 
-#sunshine {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+
+
+#forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fiveDay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nameAndButton {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
 }
 
 .weatherCard {
@@ -17,6 +30,8 @@ img {
   color: white;
   font-size: large;
   font-weight: 500;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title {
@@ -60,7 +75,7 @@ h3 {
 }
 
 
-@media screen and (min-width: 568px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
     .tag__custom {
         height: auto !important;
@@ -68,18 +83,31 @@ h3 {
         width: 100%;
     }
 
- .weatherCard{
-     margin-right: 5px;
-     margin-left: 5px;
- }
+    #forecast {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
- .weatherIcon {
-     padding: 0;
- }
+     #bad-weather-button {
+        align-self: flex-end;
+    } 
+
+    .weatherCard{
+        align-self: flex-end;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .weatherIcon {
+        padding: 0;
+    }
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 567px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
+
+   
 
     .tag__custom  {
         height: auto !important;
@@ -91,9 +119,28 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #forecast{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fiveDay {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .weatherCard {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
         margin-bottom: 10px;
         margin-top: 10px;
         width: 50%;
