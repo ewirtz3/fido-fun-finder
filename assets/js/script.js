@@ -1,8 +1,6 @@
 //onClick function attached to sunshineBtn, takes in user's city input and queries Open Weather API for that city's 5-day forecast, appends it to #sunshine div
 $("#sunshineBtn").on("click", function (event) {
-
   event.preventDefault();
-
   var input = $(".input").val();
   var APIKey = "0246ddd8e1c43f29cf72682d14088ce6";
   var queryURL =
@@ -12,6 +10,13 @@ $("#sunshineBtn").on("click", function (event) {
     APIKey +
     "&units=imperial";
 
+    console.log(input);
+    if (input === "") {
+      alert("please enter a city");
+    }
+    else {
+      
+    
   $.ajax({
     url: queryURL,
     method: "GET",
@@ -19,7 +24,7 @@ $("#sunshineBtn").on("click", function (event) {
     var city = $("#city").text(input);
 
     for (i = 7; i < response.list.length; i += 8) {
-      var newDiv = $("<div>").addClass("weatherCard").appendTo("#sunshine");
+      var newDiv = $("<div>").addClass("weatherCard").appendTo(".fiveDay");
 
       var futureDate = $("<h5>")
         .text(moment.unix(response.list[i].dt).format("M/D/YYYY"))
@@ -37,6 +42,7 @@ $("#sunshineBtn").on("click", function (event) {
 
   $("#frontPage").removeClass("is-active");
   $("#nature").removeClass("is-hidden");
+}
 });
 
 //in case the weather forecast isn't great, we want the user to have the option to switch lanes and get a random drink recipe. Declaring variable attached to the badWeatherBtn, which will have the same affect as the user having originally chosen spirits over sunshine
