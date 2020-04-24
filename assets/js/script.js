@@ -1,5 +1,6 @@
 //onClick function attached to sunshineBtn, takes in user's city input and queries Open Weather API for that city's 5-day forecast, appends it to #sunshine div
 $("#sunshineBtn").on("click", function (event) {
+
   event.preventDefault();
 
   var input = $(".input").val();
@@ -104,8 +105,6 @@ $(badWeatherBtn).on("click", function (event) {
       return noNull != null;
     });
 
-    console.log(measureArray);
-
     for (i = 0; i < newArray.length; i++) {
       var ingredientList = $("<ul>").appendTo("#listOfIngredients");
       var newIngredients = $("<li>")
@@ -184,8 +183,6 @@ $("#spiritsBtn").on("click", function (event) {
       return noNull != null;
     });
 
-    console.log(measureArray);
-
     for (i = 0; i < newArray.length; i++) {
       var ingredientList = $("<ul>").appendTo("#listOfIngredients");
       var newIngredients = $("<li>")
@@ -201,3 +198,4 @@ $("#spiritsBtn").on("click", function (event) {
   $("#frontPage").removeClass("is-active");
   $("#drinks").removeClass("is-hidden");
 });
+

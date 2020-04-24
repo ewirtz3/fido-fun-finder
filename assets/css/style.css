@@ -58,3 +58,47 @@ h3 {
   font-size: 30px;
   text-decoration: underline;
 }
+
+
+@media screen and (min-width: 568px) and (max-width: 1023px) {
+
+    .tag__custom {
+        height: auto !important;
+        word-break: break-word;
+        width: 100%;
+    }
+
+ .weatherCard{
+     margin-right: 5px;
+     margin-left: 5px;
+ }
+
+ .weatherIcon {
+     padding: 0;
+ }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 567px) {
+
+    .tag__custom  {
+        height: auto !important;
+        word-break: break-word;
+        width: 100%;
+    }
+
+    #sunshine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weatherCard {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 50%;
+    }
+}
+
+
+
