@@ -19,7 +19,7 @@ $("#sunshineBtn").on("click", function (event) {
     var city = $("#city").text(input);
 
     for (i = 7; i < response.list.length; i += 8) {
-      var newDiv = $("<div>").addClass("weatherCard").appendTo("#sunshine");
+      var newDiv = $("<div>").addClass("weatherCard").appendTo(".fiveDay");
 
       var futureDate = $("<h5>")
         .text(moment.unix(response.list[i].dt).format("M/D/YYYY"))
