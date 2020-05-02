@@ -15,3 +15,5 @@ Are you bored? It's quarantine, so chances are likely. Enter: Inside or Outside?
 If you want to get some fresh air, just enter your city and hit the Gimme sunshine! button. You'll get your 5-day weather forecast, so you can decide whether your excursion will be a shorts or pants situation.
 
 If you didn't want to see the sun in the first place, you may choose the Gimme spirits! button. Or if you chose sunshine and the weather is subpar, click Bad weather? Let's drink. Both of these will give you a random cocktail to make for your indoor adventure, complete with name, picture, recipe, measurements, and instructions. The Hit me again! button will keep the random drinks (and the fun) flowing until the cows come home.
+
+Link to site: https://ewirtz3.github.io/inside-or-outside/
