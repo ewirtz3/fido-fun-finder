@@ -33,6 +33,6 @@ Click the link above to go to the site. If you want to stay inside, click Gimme 
 
 ## License
 
-MIT License Copyright(c) 2020 Emily Wirtz, Chris Kramer, Michael Cervantes
+MIT License Copyright(c) 2020 <a href="https://github.com/ewirtz3">Emily Wirtz</a>, <a href="https://github.com/ChrisKramer15">Chris Kramer</a>, <a href="https://github.com/mac95860">Michael Cervantes</a>
 
 If you have any questions, please contact me at GitHub username <a href="https://github.com/ewirtz3">ewirtz3</a>
