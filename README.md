@@ -10,6 +10,7 @@ If you didn't want to see the sun in the first place, you may choose the Gimme s
 
 Link to site: https://ewirtz3.github.io/inside-or-outside/
 
+<img src="./insideOrOutsideScreenshot.png"/>
 <img src="https://img.shields.io/github/last-commit/ewirtz3/inside-or-outside?style=for-the-badge"/>
 
 ## Table of Contents
